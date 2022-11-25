@@ -353,3 +353,63 @@ MDScreen:
     
     
     
+    
+ ## main.kv
+    
+    
+    MDScreen:
+    name:"main"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            source:"b12.jpg"
+            size_hint: .8, .5
+            pos_hint: {'center_x': .5,'center_y': .8}
+        MDLabel:
+            text:"digite aqui"
+            font_name:"C:/Windows/Fonts/ARIAL.TTF"
+            font_size: "35sp"
+            pos_hint:{"center_x": .9, "center_y": .61}
+            haling:"center"
+            theme_text_color: "Custom"
+            text_color: 53/255, 56/255, 60/255, 1
+        MDFloatLayout:
+            size_hint:.85, .08
+            pos_hint: {'center_x': .5,'center_y': .22}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255,238/255,1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22, 22, 22, 22]
+            TextInput:
+                id: bot_name
+                hint_text: "chatb name"
+                size_hint: 1, None
+                pos_hint: {'center_x': .5,'center_y': .5}
+                font_size: "18sp"
+                height: self.minimum_height
+                cursor_color:1,170/255,23/255,1
+                cursor_width: "2sp"
+                foreground_color: 1,170/255,23/255,1
+                background_color: 0,0,0,0
+                padding: ('15dp', '15dp', '15dp', '15dp')
+                font_name:"C:/Windows/Fonts/ARIAL.TTF"
+        Button:
+            text:'Começar'
+            size_hint: .45,.08
+            pos_hint: {'center_x': .5,'center_y': .1}
+            background_color: 1,1,1,1
+            on_release: 
+                root.manager.transition.direction = "left"
+                root.manager.current = "chats"
+        MDLabel:
+            text: "lets chat"
+            haling: "center"
+            pos_hint: {'center_y': .1}
+            font_size: "18sp"
+            color: 1,1,.5
+    
+    
+    
