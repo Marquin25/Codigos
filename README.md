@@ -250,7 +250,7 @@ MDScreen:
                     app.send()
     
     
-   ## youtube.kv
+   ## yout.kv
     
     MDScreen:
     txt_input: txt_input
